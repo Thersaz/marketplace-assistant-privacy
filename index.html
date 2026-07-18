@@ -23,7 +23,7 @@
 <body>
   <main>
     <h1>Privacy Policy for Marketplace Assistant</h1>
-    <p class="date">Effective date: July 17, 2026</p>
+    <p class="date">Effective date: July 18, 2026</p>
     <p>Marketplace Assistant is a Chrome extension that helps a signed-in user read the user's own Facebook Marketplace vehicle listings and prepare a new draft listing. The extension processes data only as described below.</p>
 
     <h2>1. Data we collect or process</h2>
@@ -31,16 +31,22 @@
     <p>When the user starts a scan, copy, or draft operation, the extension processes the selected listing's title, price, vehicle attributes, description, listing URL, approximate listing location, photographs, and publication status. This data comes from the Facebook Marketplace pages opened by the user.</p>
 
     <h3>Account and authentication data</h3>
-    <p>If the user creates or signs into a Marketplace Assistant account, the extension processes the user's email address, Supabase user ID, authentication session tokens, and Free/Pro subscription status. Facebook passwords, Facebook authentication cookies, and Facebook access tokens are not collected.</p>
+    <p>If the user creates or signs into a Marketplace Assistant account, the extension processes the user's email address, Supabase user ID, authentication session tokens, and Free/Pro access status. Facebook passwords, Facebook authentication cookies, and Facebook access tokens are not collected.</p>
+
+    <h3>Optional donations</h3>
+    <p>Marketplace Assistant is currently free. If the user voluntarily chooses to support the project, the extension opens a Stripe-hosted payment page in a new browser tab. Payment details are entered directly on Stripe and are not collected or stored by the extension. Stripe may process payment, billing, device, and transaction information under Stripe's own privacy policy.</p>
 
     <h3>Support communications</h3>
     <p>When the user voluntarily submits a support request, the extension collects the subject, message, account identifier, and submission time so the developer can respond and investigate the request.</p>
+
+    <h3>News and poll responses</h3>
+    <p>The extension downloads developer-published news, maintenance notices, links, and poll options from Supabase. If a signed-in user voluntarily answers a poll, the selected option, poll identifier, Supabase user ID, and response time are stored so that one account has one current answer per poll. Poll responses are not used for advertising or profiling.</p>
 
     <h3>Technical diagnostics and user activity</h3>
     <p>When an unexpected extension error occurs for a signed-in user, the extension may automatically send a limited diagnostic report containing the extension version, Chrome/browser version, interface language, extension component, operation name, workflow status, sanitized error message, sanitized stack trace, time, and a duplicate-error fingerprint. Email addresses, authentication tokens, long numeric identifiers, and full URLs are removed or redacted before transmission. Diagnostic reports do not include listing photographs, Facebook messages, Facebook credentials, general browsing history, or full page contents.</p>
 
     <h3>Locally stored extension data</h3>
-    <p>The extension stores interface language, account session, selected listing data, Marketplace listing URLs selected by the user, workflow state, action log, copied listing content, and temporary photograph data in Chrome extension storage. It does not access or collect the user's general Chrome browsing history.</p>
+    <p>The extension stores interface language, account session, selected listing data, Marketplace listing URLs selected by the user, workflow state, action log, copied listing content, temporary photograph data, cached announcements, and identifiers of read or dismissed announcements in Chrome extension storage. It does not access or collect the user's general Chrome browsing history.</p>
     <p>The extension does not collect medical information, creditworthiness information, payment-card information, precise device location, or communications from Facebook Messenger.</p>
 
     <h2>2. How data is used</h2>
@@ -50,6 +56,9 @@
       <li>copy a listing selected by the user;</li>
       <li>transfer listing text and photographs into a new Marketplace draft for the user to review;</li>
       <li>authenticate Marketplace Assistant accounts and determine Free/Pro access;</li>
+      <li>open the optional Stripe donation page when the user requests it;</li>
+      <li>display developer-published product news and maintenance notices;</li>
+      <li>record a poll answer only when the signed-in user chooses to vote;</li>
       <li>respond to support requests;</li>
       <li>diagnose errors, prevent duplicate reports, secure the service, and improve reliability.</li>
     </ul>
@@ -57,13 +66,14 @@
 
     <h2>3. Storage, security, and retention</h2>
     <p>Listing content, photographs, workflow state, preferences, and session information are stored locally in Chrome extension storage or temporary files on the user's device. Temporary photograph files are removed after the operation where possible. Local data remains until it is replaced, cleared through Chrome, or the extension is uninstalled.</p>
-    <p>Account records, support requests, and sanitized diagnostic reports are stored in the developer's Supabase project. Data sent to Supabase is transmitted over HTTPS. Database access is restricted through authenticated requests and row-level access controls. Authentication session tokens are stored locally and are used only to maintain the user's signed-in session.</p>
-    <p>Account information is retained while the account is active or until deletion is requested. Support and diagnostic records may be retained for up to 12 months, unless a longer period is reasonably required to resolve an open support or security issue or to comply with law.</p>
+    <p>Account records, poll responses, support requests, and sanitized diagnostic reports are stored in the developer's Supabase project. Data sent to Supabase is transmitted over HTTPS. Database access is restricted through authenticated requests and row-level access controls. Authentication session tokens are stored locally and are used only to maintain the user's signed-in session.</p>
+    <p>Account information and poll responses are retained while the account is active, until the related poll is deleted, or until deletion is requested. Support and diagnostic records may be retained for up to 12 months, unless a longer period is reasonably required to resolve an open support or security issue or to comply with law.</p>
 
     <h2>4. Data sharing and disclosure</h2>
     <p>The developer does not sell, rent, or use user data for advertising. Data is disclosed only in these limited circumstances:</p>
     <ul>
-      <li><strong>Supabase:</strong> acts as the service provider for account authentication, subscription status, support requests, and sanitized diagnostic storage;</li>
+      <li><strong>Supabase:</strong> acts as the service provider for account authentication, access status, product announcements, poll responses, support requests, and sanitized diagnostic storage;</li>
+      <li><strong>Stripe:</strong> processes an optional donation only when the user chooses to open the donation page and submit a payment; payment-card details are provided directly to Stripe and are not received by the extension;</li>
       <li><strong>Meta/Facebook:</strong> listing data is read from and written back to Facebook Marketplace only when the user requests the corresponding extension action; the extension does not provide Meta with a separate diagnostic or account database;</li>
       <li><strong>Legal or security requirements:</strong> data may be disclosed when reasonably necessary to comply with law, prevent fraud or abuse, or protect users and the service;</li>
       <li><strong>Business transfer:</strong> data may be transferred as part of a merger, acquisition, or sale of assets, subject to this policy and applicable law.</li>
@@ -72,10 +82,10 @@
     <p><strong>Marketplace Assistant's use and transfer of information complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</strong></p>
 
     <h2>5. User choices and deletion</h2>
-    <p>Users can stop a workflow at any time, sign out, clear extension storage, or uninstall the extension. To request access to, correction of, or deletion of account, support, or diagnostic data stored in Supabase, email <a href="mailto:musicyt200@gmail.com">musicyt200@gmail.com</a> from the email address associated with the account.</p>
+    <p>Users can stop a workflow at any time, choose whether to answer a poll, change a poll answer, dismiss an announcement, sign out, clear extension storage, or uninstall the extension. To request access to, correction of, or deletion of account, poll, support, or diagnostic data stored in Supabase, email <a href="mailto:musicyt200@gmail.com">musicyt200@gmail.com</a> from the email address associated with the account.</p>
 
     <h2>6. Third-party services</h2>
-    <p>Facebook Marketplace is operated by Meta. Supabase provides authentication and database services. Their processing is also governed by their respective privacy policies and terms. Marketplace Assistant is not affiliated with, endorsed by, or sponsored by Meta or Facebook.</p>
+    <p>Facebook Marketplace is operated by Meta. Supabase provides authentication and database services. Stripe provides the optional hosted donation page and payment processing. Their processing is also governed by their respective privacy policies and terms. Marketplace Assistant is not affiliated with, endorsed by, or sponsored by Meta or Facebook.</p>
 
     <h2>7. Changes to this policy</h2>
     <p>This policy may be updated when the extension's data practices change. The effective date above will be updated, and material changes will be disclosed through the extension or its Chrome Web Store listing when required.</p>
